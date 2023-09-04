@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "watch-commander"
+version = "0.1.0"
+description = "Lightweight webapp for LEOs"
+authors = ["kd112 <kd_112@protonmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "watch_commander"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^2.3.3"
+pandas = "^2.1.0"
+flask-sqlalchemy = "^3.0.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
