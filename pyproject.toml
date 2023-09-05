@@ -12,6 +12,8 @@ python = "^3.11"
 flask = "^2.3.3"
 pandas = "^2.1.0"
 flask-sqlalchemy = "^3.0.5"
+flask-bcrypt = "^1.0.1"
+pymysql = "^1.1.0"
 
 
 [build-system]
