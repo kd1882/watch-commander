@@ -2,7 +2,7 @@
 {% block title %}Register or Login{% endblock %}
 {% block content %}
 <!-- Register -->
-<div class="container-md d-flex flex-column align-items-center p-3">
+<div class="container d-flex flex-column align-items-center p-3">
     {% with messages = get_flashed_messages() %}
     {% if messages %}
     {% for message in messages %}
@@ -11,6 +11,18 @@
     {% endif %}
     {% endwith %}
     <div class="row">
+        <div class="col">
+            <div class="row">
+                <div class="col">
+                    <p>Watch commander helps Law Enforcement Officers get access to Key Information, fast. The knowledge of one is the knowledge of all.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>logo</p>
+                </div>
+            </div>
+        </div>
         <div class="col">
             <div class="card bg-dark text-white border rounded-3 p-3">
                 <div class="row">
@@ -55,36 +67,6 @@
                         </div>
                     </div>
                 </form>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card bg-dark text-white border rounded-3 p-3">
-                <div class="row">
-                    <div class="col">
-                        <h2>Login</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <form action="/login/user" method="POST">
-                            <div class="mb-3 mt-3">
-                                <label for="email" class="form-label">Email Address:</label>
-                                <input name="email" type="email" class="form-control" id="email">
-                            </div>
-                            <!-- <div class="mb-3">
-                                <label for="username" class="form-label">Username</label>
-                                <input name="username" type="text" class="form-control" id="username" required>
-                            </div> -->
-                            <div class="mb-3">
-                                <label for="password" class="form-label">Password:</label>
-                                <input name="password" type="password" class="form-control" id="password" required>
-                            </div>
-                            <div class="d-grid">
-                                <button type="submit" class="btn btn-primary">Login</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

@@ -1,6 +1,10 @@
 body {
-    padding-top: 90px;
+    padding-top: 130px;
     min-height: 100vh;
+}
+
+.margin-left-250 {
+    margin-left: 250px;
 }
 
 /* .main-content {
