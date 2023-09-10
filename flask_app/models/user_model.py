@@ -6,13 +6,14 @@ import pprint
 EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
 
 class User:
-    DB = 'magazines'
+    DB = 'watchCommander'
 
     def __init__(self, data):
         self.id = data['id']
         self.first_name = data['first_name']
         self.last_name  = data['last_name']
         self.email = data['email']
+        self.department = data['department']
         self.password = data['password']
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
@@ -20,14 +21,12 @@ class User:
     # Create
     @classmethod
     def save(cls, data):
-        query = "INSERT INTO users (first_name, last_name, email, password) VALUES (%(first_name)s, %(last_name)s, %(email)s, %(password)s);"
+        query = "INSERT INTO users (first_name, last_name, email, department, password) VALUES (%(first_name)s, %(last_name)s, %(email)s, %(department)s, %(password)s);"
         return connectToMySQL(cls.DB).query_db(query, data)
     
-    @classmethod
-    def edit_user(cls, data):
-        pass
-    #     query = "UPDATE tv_show SET title = %(title)s, network = %(network)s, release_date = %(release_date)s, description = %(description)s, updated_at = NOW() WHERE id = %(id)s;"
-    #     return connectToMySQL(cls.DB).query_db(query, data)
+    # @classmethod
+    # def edit_user(cls, data):
+    #     pass
     
     # Read all
     @classmethod

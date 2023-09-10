@@ -1,0 +1,15 @@
+User
+id
+first_name
+last_name
+email
+department
+password
+created_at
+updated_at
+
+features:
+
+login - modulo for error messages
+    - keep me logged in
+    - forgot your password
