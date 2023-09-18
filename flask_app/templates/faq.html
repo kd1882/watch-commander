@@ -1,0 +1,47 @@
+{% extends "dashboard_base.html" %}
+{% block title %}Frequently Asked Questions{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col text-white">
+        <h1>Frequently Asked Questions</h1>
+    </div>
+</div>
+<!-- Search bar for page -->
+<div class="row">
+    <div class="col">
+        <form action="{{ url_for('faq') }}" method="GET">
+            <div class="input-group">
+                <input type="text" class="form-control" name="search" placeholder="Search FAQ">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="submit">Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- FAQ questions in a sheet -->
+<div class="row">
+    <div class="col">
+        <div class="accordion" id="accordionExample">
+            {% for question in questions %}
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading{{ question.id }}">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse{{ question.id }}" aria-expanded="false"
+                        aria-controls="collapse{{ question.id }}">
+                        {{ question.question }}
+                    </button>
+                </h2>
+                <div id="collapse{{ question.id }}" class="accordion-collapse collapse"
+                    aria-labelledby="heading{{ question.id }}" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        {{ question.answer }}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+{% endblock %}

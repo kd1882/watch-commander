@@ -37,7 +37,7 @@
                         {% block nav_item %}{% endblock nav_item %}
                         <li class="nav-item d-flex">
                             <a class="nav-link" href="/dashboard">Home</a>
-                            <a class="nav-link" href="/Account">Account</a>
+                            <a class="nav-link" href="/account_management">Account</a>
                             <a class="nav-link" href="/logout">Logout</a>
                         </li>
                     </ul>
@@ -49,84 +49,54 @@
         <div class="row flex-nowrap">
             <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-primary">
 
-                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                    <svg class="bi pe-none me-2" width="40" height="32">
-                        <use xlink:href="#bootstrap"></use>
-                    </svg>
-                    <span class="fs-4">Sidebar</span>
+                <a href="/dashboard" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                    <span class="fs-4">Watch Commander</span>
                 </a>
                 <hr>
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-dark" aria-current="page">
-                            <svg class="bi pe-none me-2" width="16" height="16">
-                                <use xlink:href="#home"></use>
-                            </svg>
+                        <a href="/mgl_reference" class="nav-link text-dark" aria-current="page">
                             M.G.L. Reference
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link text-dark">
-                            <svg class="bi pe-none me-2" width="16" height="16">
-                                <use xlink:href="#speedometer2"></use>
-                            </svg>
+                        <a href="/role_call_notes" class="nav-link text-dark">
                             Role Call Notes
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link text-dark">
-                            <svg class="bi pe-none me-2" width="16" height="16">
-                                <use xlink:href="#table"></use>
-                            </svg>
-                            Report Summary
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link text-dark">
-                            <svg class="bi pe-none me-2" width="16" height="16">
-                                <use xlink:href="#grid"></use>
-                            </svg>
+                        <a href="/dept_info" class="nav-link text-dark">
                             Dept Information
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link text-dark">
-                            <svg class="bi pe-none me-2" width="16" height="16">
-                                <use xlink:href="#people-circle"></use>
-                            </svg>
+                        <a href="/legal" class="nav-link text-dark">
                             Legal
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link text-dark">
-                            <svg class="bi pe-none me-2" width="16" height="16">
-                                <use xlink:href="#people-circle"></use>
-                            </svg>
+                        <a href="/about" class="nav-link text-dark">
                             About
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link text-dark">
-                            <svg class="bi pe-none me-2" width="16" height="16">
-                                <use xlink:href="#people-circle"></use>
-                            </svg>
+                        <a href="/faq" class="nav-link text-dark">
                             FAQ
                         </a>
                     </li>
                 </ul>
                 <hr>
                 <div class="col d-flex align-items-center mt-2 mb-2 justify-content-center">
-                    <a href="#" class="btn btn-dark">Contact the Devs</a>
+                    <a href="/contact" class="btn btn-dark">Contact the Devs</a>
                 </div>
 
             </div>
             <div class="col py-3">
-                Content area...
+                {% block content %}
+
+                {% endblock content%}
             </div>
         </div>
-        {% block content %}
-
-        {% endblock content%}
     </div>
 </body>
 
