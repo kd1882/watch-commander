@@ -37,3 +37,33 @@ poetry shell
 
 python3 server.py
 ```
+
+### Needs done:
+- Update users to have a field for bios
+    - update users to add and store a photo
+        - change account info toggle
+        - Get rid of profile visibility
+        - add delete account functionality
+
+- keep me logged in functionality
+- forgot password functionality
+
+- links for dashboard (m.g.l ref, role call notes, department information)
+
+- add user posted for role call notes
+    - add filtering by date
+
+- department info
+    - add way to update, photo for department, acl?
+
+- contact the devs form actually sends an email
+
+- add FAQ's
+
+- populate mgl data for database
+    - table for mgl chapter
+    - page for chapter/section 
+
+- fix styling on pages
+    - dashboard_base - 100% of viewport, fixed pos, contact the devs fixed pos, 
+    - scrolling only affects the content portion of th page
