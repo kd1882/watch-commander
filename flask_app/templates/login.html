@@ -14,7 +14,8 @@
         <div class="col text-white">
             <div class="row">
                 <div class="col">
-                    <p>Watch commander helps Law Enforcement Officers get access to Key Information, fast. The knowledge of one is the knowledge of all.</p>
+                    <p>Watch commander helps Law Enforcement Officers get access to Key Information, fast. The knowledge
+                        of one is the knowledge of all.</p>
                 </div>
             </div>
             <div class="row">
@@ -50,8 +51,15 @@
                     <div class="row mt-3">
                         <div class="col">
                             <label for="department">Department:</label>
-                            <input type="text" class="form-control" aria-label="Department" name="department">
+                            <select name="department" id="department">
+                                <option value="" selected disabled>Choose a department...</option>
+                                {% for dept in ma_depts %}
+                                <option value="{{ dept }}">{{ dept }}</option>
+                                {% endfor %}
+                            </select>
                         </div>
+
+
                     </div>
                     <div class="row mt-3">
                         <div class="col">

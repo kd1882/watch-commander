@@ -2,13 +2,15 @@ from flask_app import app
 from flask_bcrypt import Bcrypt
 from flask import render_template, redirect, request, session, flash
 from flask_app.models.user_model import User
+from flask_app.static.utils.format_helpers import *
 
 bcrypt = Bcrypt(app)
 
 # landing page
 @app.route('/')
 def index():
-    return render_template('login.html')
+    ma_depts = ma_dept_tuple
+    return render_template('login.html', ma_depts = ma_depts)
 
 # Dashboard landing page
 @app.route('/dashboard')

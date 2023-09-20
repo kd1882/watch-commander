@@ -2,40 +2,29 @@
 {% block title %}Dashboard{% endblock %}
 {% block content %}
 <div class="row">
-    <div class="col">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title"><a href="/getting_started">Getting Started</a></h5>
-              <p class="card-text">First time using Watch Commander? Get started here!</p>
-            </div>
-          </div>
-    </div>
-    <div class="col">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">M.G.L. Reference</h5>
-              <p class="card-text">Use the M.G.L. Reference Lookup tool.</p>
-            </div>
-          </div>
-    </div>
+  <div class="col text-white border m-1 text-center align-items-center">
+    <h1>Watch Commander - Dashboard</h1>
+  </div>
 </div>
 <div class="row">
-    <div class="col">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Role Call Notes</h5>
-              <p class="card-text">Update Role Call notes to pass onto the shift.</p>
-            </div>
-          </div>
-    </div>
-    <div class="col">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Department Information</h5>
-              <p class="card-text">Look up current information about your department.</p>
-            </div>
-          </div>
-    </div>
+  <div class="col text-white border m-1">
+    <h5><a href="/getting_started">Getting Started</a></h5>
+    <p>First time using Watch Commander? Get started here!</p>
+  </div>
+  <div class="col text-white border m-1">
+    <h5><a href="/mgl_reference">M.G.L. Reference</a></h5>
+    <p>Use the M.G.L. Reference Lookup tool.</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col text-white border m-1">
+    <h5><a href="/role_call_notes">Role Call Notes</a></h5>
+    <p>Update Role Call notes to pass onto the shift.</p>
+  </div>
+  <div class="col text-white border m-1">
+    <h5><a href="/dept_info">Department Information</a></h5>
+    <p>Look up current information about your department.</p>
+  </div>
 </div>
 
 {% endblock %}

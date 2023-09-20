@@ -39,16 +39,13 @@ python3 server.py
 ```
 
 ### Needs done:
-- Update users to have a field for bios
+- users stuff
     - update users to add and store a photo
         - change account info toggle
-        - Get rid of profile visibility
         - add delete account functionality
 
 - keep me logged in functionality
 - forgot password functionality
-
-- links for dashboard (m.g.l ref, role call notes, department information)
 
 - add user posted for role call notes
     - add filtering by date
@@ -56,7 +53,7 @@ python3 server.py
 - department info
     - add way to update, photo for department, acl?
 
-- contact the devs form actually sends an email
+- contact the devs form adds a ticket to a database?
 
 - add FAQ's
 

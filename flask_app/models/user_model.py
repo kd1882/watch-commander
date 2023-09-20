@@ -79,6 +79,9 @@ class User:
         if not EMAIL_REGEX.match(user['email']): 
             flash("Invalid email address!")
             is_valid = False
+        if len(user['department']) < 2:
+            flash("You must select a Department/Affiliation.")
+            is_valid = False
         if user['email'] in email_list:
             flash("That email is already in use.")
             is_valid = False
