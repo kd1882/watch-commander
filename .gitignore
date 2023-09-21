@@ -107,6 +107,7 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+.virtual_documents/
 
 #################
 # Python Ignore 
