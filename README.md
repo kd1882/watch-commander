@@ -64,3 +64,13 @@ python3 server.py
 - fix styling on pages
     - dashboard_base - 100% of viewport, fixed pos, contact the devs fixed pos, 
     - scrolling only affects the content portion of th page
+
+- rework databases
+    - Re-structure project flow and overall concept of site
+    - rewrite models to use sql-alchemy
+
+- ACL and roles for different departments
+    - Descriptions
+    - How the admins get set
+    - e-mail verification
+    - look into using keycloack
