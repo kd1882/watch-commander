@@ -1,121 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="description" content="Watch Commander" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+            crossorigin="anonymous" />
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='css/dash_style.css') }}" />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"
+            async
+            defer></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+            async
+            defer></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+            integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+            crossorigin="anonymous"
+            async
+            defer></script>
+    </head>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{% block title %}{% endblock %}</title>
-    <meta name="description" content="Watch Commander">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/dash_style.css') }}">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"
-        async defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"
-        async defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
-        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"
-        async defer></script>
-</head>
-
-<body class="bg-dark bg-gradient">
-    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body fixed-top" data-bs-theme="dark">
+    <body class="bg-dark bg-gradient">
+        <nav
+            class="navbar navbar-expand-lg bg-dark border-bottom border-body fixed-top"
+            data-bs-theme="dark">
+            <div class="container-fluid">
+                <div class="div d-flex">
+                    <a class="navbar-brand" href="/dashboard">Watch Commander</a>
+                    <form class="d-flex" role="search">
+                        <input
+                            class="form-control me-2"
+                            type="search"
+                            placeholder="Search"
+                            aria-label="Search" />
+                        <button class="btn btn-outline-success" type="submit">
+                            Search
+                        </button>
+                    </form>
+                </div>
+                <div class="div">
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mr-auto">
+                            {% block nav_item %}{% endblock nav_item %}
+                            <li class="nav-item d-flex">
+                                <a class="nav-link" href="/dashboard">Home</a>
+                                <a class="nav-link" href="/account_management">Account</a>
+                                <a class="nav-link" href="/logout">Logout</a>
+                                <button
+                                    class="btn btn-dark"
+                                    type="button"
+                                    data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasScrolling"
+                                    aria-controls="offcanvasScrolling">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
         <div class="container-fluid">
-            <div class="div d-flex">
-                <a class="navbar-brand" href="/dashboard">Watch Commander</a>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
-            <div class="div">
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mr-auto">
-                        {% block nav_item %}{% endblock nav_item %}
-                        <li class="nav-item d-flex">
-                            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
-                                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Side Nav
-                                Bar</button>
-                            <a class="nav-link" href="/dashboard">Home</a>
-                            <a class="nav-link" href="/account_management">Account</a>
-                            <a class="nav-link" href="/logout">Logout</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <div class="container-fluid">
-        <div class="row flex-nowrap">
-            <div class="col offcanvas offcanvas-start bg-dark text-white" data-bs-scroll="true" data-bs-backdrop="false"
-                tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Side Nav</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body d-flex flex-column justify-content-between">
-                    <div class="row">
-                        <div class="col">
-
-                            <a href="/dashboard"
-                                class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                                <span class="fs-4">Watch Commander</span>
-                            </a>
-                            <hr>
-                            <ul class="nav nav-pills flex-column mb-auto">
-                                <li class="nav-item">
-                                    <a href="/mgl_reference" class="nav-link text-white" aria-current="page">
-                                        M.G.L. Reference
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/role_call_notes" class="nav-link text-white">
-                                        Role Call Notes
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/dept_info" class="nav-link text-white">
-                                        Dept Information
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/legal" class="nav-link text-white">
-                                        Legal
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/about" class="nav-link text-white">
-                                        About
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/faq" class="nav-link text-white">
-                                        FAQ
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+            <div class="row flex-nowrap">
+                <div
+                    class="col offcanvas offcanvas-start bg-dark text-white"
+                    data-bs-scroll="true"
+                    data-bs-backdrop="false"
+                    tabindex="-1"
+                    id="offcanvasScrolling"
+                    aria-labelledby="offcanvasScrollingLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasScrollingLabel"></h5>
+                        <button
+                            type="button"
+                            class="btn-close btn-close-white"
+                            data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
                     </div>
-                    <div class="row">
-                        <div class="col">
-                            <a href="/contact" class="btn btn-primary">Contact the Devs</a>
+                    <div
+                        class="offcanvas-body d-flex flex-column justify-content-between">
+                        <div class="row">
+                            <div class="col">
+                                <a
+                                    href="/dashboard"
+                                    class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                                    <span class="fs-4">Dashboard</span>
+                                </a>
+                                <hr />
+                                <ul class="nav nav-pills flex-column mb-auto">
+                                    <li class="nav-item">
+                                        <a
+                                            href="/mgl_reference"
+                                            class="nav-link text-white"
+                                            aria-current="page">
+                                            M.G.L. Reference
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/role_call_notes"
+                                            class="nav-link text-white">
+                                            Role Call Notes
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/dept_info"
+                                            class="nav-link text-white">
+                                            Dept Information
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/legal"
+                                            class="nav-link text-white"> Legal
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/about"
+                                            class="nav-link text-white"> About
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/faq"
+                                            class="nav-link text-white"> FAQ
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <a href="/contact" class="btn btn-primary">Contact
+                                    the Devs</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col py-3">
-                {% block content %}
-
-                {% endblock content%}
+                <div class="col py-3">{% block content %} {% endblock content%}</div>
             </div>
         </div>
-    </div>
-
-</body>
-
+    </body>
 </html>

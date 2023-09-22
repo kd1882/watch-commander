@@ -61,10 +61,6 @@ python3 server.py
     - table for mgl chapter
     - page for chapter/section 
 
-- fix styling on pages
-    - dashboard_base - 100% of viewport, fixed pos, contact the devs fixed pos, 
-    - scrolling only affects the content portion of th page
-
 - rework databases
     - Re-structure project flow and overall concept of site
     - rewrite models to use sql-alchemy
