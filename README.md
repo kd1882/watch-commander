@@ -44,6 +44,10 @@ python3 server.py
         - change account info toggle
         - add delete account functionality
 
+- SQL Alchemy Implementation
+
+Key Cloak implementation
+
 - keep me logged in functionality
 - forgot password functionality
 
@@ -69,4 +73,3 @@ python3 server.py
     - Descriptions
     - How the admins get set
     - e-mail verification
-    - look into using keycloack
