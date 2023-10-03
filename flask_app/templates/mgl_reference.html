@@ -1,101 +1,53 @@
 {% extends "dashboard_base.html" %}
 {% block title %}M.G.L. Reference{% endblock %}
 {% block content %}
-<div class="row text-white d-flex">
-    <div class="col">
-        <h1>M.G.L. Reference</h1>
+<div class="container">
+    <div class="row text-white d-flex">
+        <div class="col">
+            <h1>M.G.L. Reference</h1>
+        </div>
+        <div class="col d-flex justify-content-end">
+            <a href="/dashboard" class="btn btn-primary p-3">Back to Squad Room</a>
+        </div>
     </div>
-    <div class="col d-flex justify-content-end">
-        <a href="/dashboard" class="btn btn-primary p-3">Back to Squad Room</a>
+    <div class="row">
+        <div class="col text-white">
+            <p>Quick Reference for Mass General Laws</p>
+        </div>
     </div>
-</div>
-<div class="row">
-    <div class="col text-white">
-        <p>Quick Reference for Mass General Laws</p>
+
+    {% set chapters=[
+    {"title": "Chapter 90", "description": "Traffic Laws and Citations"},
+    {"title": "Chapter 263", "description": "Rights of Persons Accused of Crimes"},
+    {"title": "Chapter 263A", "description": "Witness Protection in Criminal Matters"},
+    {"title": "Chapter 265", "description": "Crimes Against the Person"},
+    {"title": "Chapter 266", "description": "Crimes Against the Property"},
+    {"title": "Chapter 267", "description": "Forgery and Crimes Against the Currency"},
+    {"title": "Chapter 267A", "description": "Money Laundering"},
+    {"title": "Chapter 268", "description": "Crimes Against Public Justice"},
+    {"title": "Chapter 268A", "description": "Conduct of Public Officials and Employees"},
+    {"title": "Chapter 268B", "description": "Financial Disclosure by Certain Public Officials and Employees"},
+    {"title": "Chapter 269", "description": "Crimes Against Public Peace"},
+    {"title": "Chapter 270", "description": "Crimes Against Public Health"},
+    {"title": "Chapter 271", "description": "Crimes Against Public Policy"},
+    {"title": "Chapter 271A", "description": "Enterprise Crime"},
+    {"title": "Chapter 272", "description": "Crimes Against Chastity, Morality, Decency and Good Order"},
+    {"title": "Chapter 273", "description": "Desertion, Support, and Illegitimacy"},
+    {"title": "Chapter 273A", "description": "Uniform Reciprocal Enforcement of Support"},
+    {"title": "Chapter 274", "description": "Felonies, Accessories and Attempts to Commit Crimes"}
+    ] %}
+
+    {% for i in range(0, chapters|length, 3) %}
+    <div class="row text-center text-white">
+        {% for j in range(3) %}
+        {% if chapters[i + j] %}
+        <div class="col border m-1 pt-1">
+            <h4>{{ chapters[i + j].title }}</h4>
+            <p>{{ chapters[i + j].description }}</p>
+        </div>
+        {% endif %}
+        {% endfor %}
     </div>
-</div>
-<div class="row text-white">
-    <div class="col">
-        <h4>Test</h4>
-        <p>Test and Test</p>
-    </div>
-    <div class="col">
-        <h4>Test</h4>
-        <p>Test and Test</p>
-    </div>
-    <div class="col">
-        <h4>Test</h4>
-        <p>Test and Test</p>
-    </div>
-</div>
-<div class="row text-white">
-    <div class="col">
-        <h4>Test</h4>
-        <p>Test and Test</p>
-    </div>
-    <div class="col">
-        <h4>Test</h4>
-        <p>Test and Test</p>
-    </div>
-    <div class="col">
-        <h4>Test</h4>
-        <p>Test and Test</p>
-    </div>
-</div>
-<div class="row text-white">
-    <div class="col">
-        <h4>Test</h4>
-        <p>Test and Test</p>
-    </div>
-    <div class="col">
-        <h4>Test</h4>
-        <p>Test and Test</p>
-    </div>
-    <div class="col">
-        <h4>Test</h4>
-        <p>Test and Test</p>
-    </div>
-</div>
-<div class="row text-white">
-    <div class="col">
-        <h4>Test</h4>
-        <p>Test and Test</p>
-    </div>
-    <div class="col">
-        <h4>Test</h4>
-        <p>Test and Test</p>
-    </div>
-    <div class="col">
-        <h4>Test</h4>
-        <p>Test and Test</p>
-    </div>
-</div>
-<div class="row text-white">
-    <div class="col">
-        <h4>Test</h4>
-        <p>Test and Test</p>
-    </div>
-    <div class="col">
-        <h4>Test</h4>
-        <p>Test and Test</p>
-    </div>
-    <div class="col">
-        <h4>Test</h4>
-        <p>Test and Test</p>
-    </div>
-</div>
-<div class="row text-white">
-    <div class="col">
-        <h4>Test</h4>
-        <p>Test and Test</p>
-    </div>
-    <div class="col">
-        <h4>Test</h4>
-        <p>Test and Test</p>
-    </div>
-    <div class="col">
-        <h4>Test</h4>
-        <p>Test and Test</p>
-    </div>
+    {% endfor %}
 </div>
 {% endblock %}
