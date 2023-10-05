@@ -26,23 +26,23 @@
     {"title": "Chapter 267A", "description": "Money Laundering"},
     {"title": "Chapter 268", "description": "Crimes Against Public Justice"},
     {"title": "Chapter 268A", "description": "Conduct of Public Officials and Employees"},
-    {"title": "Chapter 268B", "description": "Financial Disclosure by Certain Public Officials and Employees"},
+    {"title": "Chapter 268B", "description": "Financial Disclosure by Certain..."},
     {"title": "Chapter 269", "description": "Crimes Against Public Peace"},
     {"title": "Chapter 270", "description": "Crimes Against Public Health"},
     {"title": "Chapter 271", "description": "Crimes Against Public Policy"},
     {"title": "Chapter 271A", "description": "Enterprise Crime"},
-    {"title": "Chapter 272", "description": "Crimes Against Chastity, Morality, Decency and Good Order"},
+    {"title": "Chapter 272", "description": "Crimes Against Chastity, Morality..."},
     {"title": "Chapter 273", "description": "Desertion, Support, and Illegitimacy"},
-    {"title": "Chapter 273A", "description": "Uniform Reciprocal Enforcement of Support"},
-    {"title": "Chapter 274", "description": "Felonies, Accessories and Attempts to Commit Crimes"}
+    {"title": "Chapter 273A", "description": "Uniform Reciprocal Enforcement"},
+    {"title": "Chapter 274", "description": "Felonies"}
     ] %}
 
     {% for i in range(0, chapters|length, 3) %}
-    <div class="row text-center text-white">
+    <div class="row g-2 text-center text-white">
         {% for j in range(3) %}
         {% if chapters[i + j] %}
-        <div class="col border m-1 pt-1">
-            <h4>{{ chapters[i + j].title }}</h4>
+        <div class="col border">
+            <h4><a class="text-decoration-none" href="#">{{ chapters[i + j].title }}</a></h4>
             <p>{{ chapters[i + j].description }}</p>
         </div>
         {% endif %}
