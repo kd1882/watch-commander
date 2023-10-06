@@ -1,5 +1,6 @@
 # watch-commander
 Lightweight WebApp to lookup mass general laws, post shift notes.
+*Showcase for using flask and bootstrap*
 
 # To get started:
 
