@@ -38,38 +38,6 @@ poetry shell
 python3 server.py
 ```
 
-### Needs done:
-- users stuff
-    - update users to add and store a photo
-        - change account info toggle
-        - add delete account functionality
+# What's new?:
 
-- SQL Alchemy Implementation
-
-Key Cloak implementation
-
-- keep me logged in functionality
-- forgot password functionality
-
-- add user posted for role call notes
-    - add filtering by date
-
-- department info
-    - add way to update, photo for department, acl?
-
-- contact the devs form adds a ticket to a database?
-
-- add FAQ's
-
-- populate mgl data for database
-    - table for mgl chapter
-    - page for chapter/section 
-
-- rework databases
-    - Re-structure project flow and overall concept of site
-    - rewrite models to use sql-alchemy
-
-- ACL and roles for different departments
-    - Descriptions
-    - How the admins get set
-    - e-mail verification
+Currently working on roughing in all the bootstrap for the mgl reference portion of the webapp. Then will tie everything together on the backend. Having a bit of an issue with the m.g.l api endpoint...
