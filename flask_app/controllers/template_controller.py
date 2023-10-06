@@ -40,6 +40,24 @@ def mgl_reference():
     else:
         user = User.get_by_id(session['user_id'])
         return render_template('mgl_reference.html', user = user)
+    
+@app.route('/mgl_reference/chapter')
+def mgl_reference_chapter():
+    if not session.get('user_id'):
+        flash("Please login to access the application")
+        return redirect('/')
+    else:
+        user = User.get_by_id(session['user_id'])
+        return render_template('mgl_chapter.html', user = user)
+    
+@app.route('/mgl_reference/chapter/section')
+def mgl_reference_section():
+    if not session.get('user_id'):
+        flash("Please login to access the application")
+        return redirect('/')
+    else:
+        user = User.get_by_id(session['user_id'])
+        return render_template('mgl_section.html', user = user)
 
 # role call notes page
 @app.route('/role_call_notes')
