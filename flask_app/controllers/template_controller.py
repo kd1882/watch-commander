@@ -22,14 +22,14 @@ def dashboard():
         user = User.get_by_id(session['user_id'])
         return render_template('dashboard.html', user = user)
     
-# getting started page
-@app.route('/getting_started')
+# Mental Health resources page
+@app.route('/mental_health_resources')
 def getting_started():
     if not session.get('user_id'):
         flash("Please login to access the application")
         return redirect('/')
     else:
-        return render_template('getting_started.html')
+        return render_template('mental_health_reference.html')
 
 # mgl_reference page
 @app.route('/mgl_reference')
@@ -59,25 +59,25 @@ def mgl_reference_section():
         user = User.get_by_id(session['user_id'])
         return render_template('mgl_section.html', user = user)
 
-# role call notes page
-@app.route('/role_call_notes')
+# oui reference page
+@app.route('/oui_reference')
 def role_call_notes():
     if not session.get('user_id'):
         flash("Please login to access the application")
         return redirect('/')
     else:
         user = User.get_by_id(session['user_id'])
-        return render_template('rolecall_notes.html', user = user)
+        return render_template('oui_reference.html', user = user)
 
 # dept info page
-@app.route('/dept_info')
+@app.route('/dv_resources')
 def dept_info():
     if not session.get('user_id'):
         flash("Please login to access the application")
         return redirect('/')
     else:
         user = User.get_by_id(session['user_id'])
-        return render_template('dept_information.html', user = user)
+        return render_template('domestic_resources.html', user = user)
 
 # legal page
 @app.route('/legal')
