@@ -41,4 +41,6 @@ python3 server.py
 
 # What's new?:
 
-Currently working on roughing in all the bootstrap for the mgl reference portion of the webapp. Then will tie everything together on the backend. Having a bit of an issue with the m.g.l api endpoint...
+- Currently working on roughing in all the bootstrap for the mgl reference portion of the webapp. Then will tie everything together on the backend. Having a bit of an issue with the m.g.l api endpoint...
+
+- Swapped scope of the project to simplify everything. Going to stick with what impacts police officers the most: Application of the laws, domestic violence, mental health, and OUI cases.
