@@ -1,5 +1,5 @@
 # watch-commander
-Lightweight WebApp to lookup mass general laws, post shift notes.
+Lightweight WebApp to lookup mass general laws and provide a single location for domestic violience, mental health, and OUI resources.
 *Showcase for using flask and bootstrap*
 
 # To get started:
