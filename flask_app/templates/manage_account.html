@@ -1,105 +1,110 @@
 {% extends "dashboard_base.html" %}
 {% block title %}Manage Account{% endblock %}
 {% block content %}
-<div class="row mb-3">
-    <div class="col d-flex text-white align align-items-center justify-content-between">
-        <h2>Account Management</h2>
-        <button class="btn btn-primary">Edit Account</button>
-    </div>
-</div>
-<div class="row">
-    <div class="col">
-        <div class="row">
-            <div class="col text-white align-items-center text-center">
-                <h1>Account Information</h1>
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col text-white">
-                <p>Profile Photo:</p>
-                <button class="btn btn-primary">Upload Photo</button>
-            </div>
-            <div class="col text-white">
-                <p>display photo</p>
-            </div>
-        </div>
-        <div class="row text-white">
-            <div class="col">
-                <p>Username:</p>
-                <p>First Name:</p>
-                <p>Last Name:</p>
-                <p>Email:</p>
-                <p>Department Number:</p>
-                <p>Bio: lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                    cupidatat non proident, sunt in culpa qui o!cia deserunt mollit anim id est
-                    laborum.</p>
-            </div>
+<div class="container">
+    <div class="row mb-3">
+        <div class="col d-flex text-white align align-items-center justify-content-between">
+            <h2>Manage Your Account</h2>
+            <button class="btn btn-primary">Edit Account</button>
         </div>
     </div>
-
-    <!-- security settings -->
-    <div class="col">
-        <div class="row">
-            <div class="col text-white align-items-center text-center">
-                <h1>Security Settings</h1>
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                <div class="col text-white align-items-center text-center">
+                    <h2>Account Information</h2>
+                </div>
             </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col border text-white text-center align-items-center">
-                <h3>Change Password</h3>
+            <div class="row mt-3">
+                <div class="col text-white">
+                    <p>Profile Photo:</p>
+                    <button class="btn btn-primary">Upload Photo</button>
+                </div>
+                <div class="col text-white">
+                    <p>display photo</p>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col border text-white p-1">
-                <form action="/manage_account/change_password" method="post">
-                    <div class="row mt-1">
-                        <div class="col">
-                            <label for="old_password">Old Password</label>
-                            <input type="password" class="form-control" id="old_password" name="old_password">
-                        </div>
-                    </div>
-                    <div class="row mt-1">
-                        <div class="col">
-                            <label for="new_password">New Password</label>
-                            <input type="password" class="form-control" id="new_password" name="new_password">
-                        </div>
-                    </div>
-                    <div class="row mt-1">
-                        <div class="col">
-                            <label for="confirm_password">Confirm Password</label>
-                            <input type="password" class="form-control" id="confirm_password" name="confirm_password">
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col">
-                            <button type="submit" class="btn btn-primary">Change Password</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col border text-white text-center align-items-center p-1">
-                <h3>Delete Account</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col border text-white text-center align-items-center p-1">
-                <p>Before you do this, acknowledge that all your information will be deleted, along with any posts that
-                    you may have submitted.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col d-flex text-white border justify-content-evenly align-items-center p-1">
-                <button class="btn btn-danger">Delete Account</button>
-                <h3>This is permanent...</h3>
+            <div class="row text-white">
+                <div class="col border">
+                    <p>Username:</p>
+                    <p>First Name:</p>
+                    <p>Last Name:</p>
+                    <p>Email:</p>
+                    <p>Department Number:</p>
+                    <p>Bio: lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                        cupidatat non proident, sunt in culpa qui o!cia deserunt mollit anim id est
+                        laborum.</p>
+                </div>
             </div>
         </div>
 
+        <!-- security settings -->
+        <div class="col">
+            <div class="row">
+                <div class="col text-white align-items-center text-center">
+                    <h2>Security Settings</h2>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col border text-white text-center align-items-center">
+                    <h3>Change Password</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col border text-white p-1">
+                    <form action="/manage_account/change_password" method="post">
+                        <div class="row mt-1">
+                            <div class="col">
+                                <label for="old_password">Old Password</label>
+                                <input type="password" class="form-control" id="old_password" name="old_password">
+                            </div>
+                        </div>
+                        <div class="row mt-1">
+                            <div class="col">
+                                <label for="new_password">New Password</label>
+                                <input type="password" class="form-control" id="new_password" name="new_password">
+                            </div>
+                        </div>
+                        <div class="row mt-1">
+                            <div class="col">
+                                <label for="confirm_password">Confirm Password</label>
+                                <input type="password" class="form-control" id="confirm_password"
+                                    name="confirm_password">
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col">
+                                <button type="submit" class="btn btn-primary">Change Password</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col border text-white text-center align-items-center p-1">
+                    <h3>Delete Account</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col border text-white text-center align-items-center p-1">
+                    <p>Before you do this, acknowledge that all your information will be deleted, along with any posts
+                        that
+                        you may have submitted.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-flex text-white border justify-content-evenly align-items-center p-1">
+                    <button class="btn btn-danger">Delete Account</button>
+                    <h3>This is permanent...</h3>
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>
+
 {% endblock %}

@@ -1,28 +1,31 @@
 {% extends "dashboard_base.html" %}
 {% block title %}Legal{% endblock %}
 {% block content %}
-<div class="row text-white d-flex">
-    <div class="col">
-        <h1>Legal Statement</h1>
+<div class="container">
+    <div class="row text-white d-flex">
+        <div class="col">
+            <h1>Legal Statement</h1>
+        </div>
+        <div class="col d-flex justify-content-end">
+            <a href="/dashboard" class="btn btn-primary p-3">Back to Squad Room</a>
+        </div>
     </div>
-    <div class="col d-flex justify-content-end">
-        <a href="/dashboard" class="btn btn-primary p-3">Back to Squad Room</a>
+    <div class="row">
+        <div class="col">
+            <p class="text-white">The information provided on this website is intended for informational purposes only and is not to be construed as legal advice or any substitute for professional
+                judgment. Users of this website are responsible for determining the accuracy, completeness, and applicability of any information provided herein, and for how it is
+                used and understood.
+                Neither Watch Commander nor any of its a!liates, directors, employees, or agents shall be held liable or responsible for any errors, omissions,
+                or inaccuracies in the information or for any user's reliance on the information. Users are solely responsible for verifying the information as being appropriate for
+                their personal use, including without limitation, seeking the advice and counsel of a qualified professional or entity regarding any specific legal or factual situation.
+                To the fullest extent permissible pursuant to applicable law, Watch Commander disclaims all warranties, express or implied, including but not
+                limited to implied warranties of merchantability and fitness for a particular purpose. Watch Commander does not warrant that the information will
+                be free from error.
+                Users of this website are hereby advised that decisions based on the provided information are at their own risk and that Watch Commander
+                shall not be held liable for any adverse outcomes, damages, or consequences arising from such decisions or actions.</p>
+        </div>
     </div>
 </div>
-<div class="row">
-    <div class="col">
-        <p class="text-white">The information provided on this website is intended for informational purposes only and is not to be construed as legal advice or any substitute for professional
-            judgment. Users of this website are responsible for determining the accuracy, completeness, and applicability of any information provided herein, and for how it is
-            used and understood.
-            Neither Watch Commander nor any of its a!liates, directors, employees, or agents shall be held liable or responsible for any errors, omissions,
-            or inaccuracies in the information or for any user's reliance on the information. Users are solely responsible for verifying the information as being appropriate for
-            their personal use, including without limitation, seeking the advice and counsel of a qualified professional or entity regarding any specific legal or factual situation.
-            To the fullest extent permissible pursuant to applicable law, Watch Commander disclaims all warranties, express or implied, including but not
-            limited to implied warranties of merchantability and fitness for a particular purpose. Watch Commander does not warrant that the information will
-            be free from error.
-            Users of this website are hereby advised that decisions based on the provided information are at their own risk and that Watch Commander
-            shall not be held liable for any adverse outcomes, damages, or consequences arising from such decisions or actions.</p>
-    </div>
-</div>
+
 
 {% endblock %}

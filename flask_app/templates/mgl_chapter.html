@@ -2,47 +2,49 @@
 {% block title %}M.G.L. Sections{% endblock %}
 {% block content %}
 <div class="container">
-    <div class="row">
-        <div class="col text-white">
-            <h1>Chapter</h1>
-        </div>
-        <div class="col d-flex justify-content-end">
-            <a href="/mgl_reference" class="btn btn-primary p-3">Back to All References</a>
-            <a href="/dashboard" class="ms-2 btn btn-primary p-3">Back to Squad Room</a>
-        </div>
+  <div class="row">
+    <div class="col text-white">
+      <h1>Chapter</h1>
     </div>
-    <div class="row">
-        <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Section</th>
-                <th scope="col">Title</th>
-                <th scope="col">Arrestable</th>
-                <th scope="col">Info</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row"><a href="/mgl_reference/chapter/section">1</a></th>
-                <td>Law</td>
-                <td>Yes</td>
-                <td>Info info</td>
-              </tr>
-              <tr>
-                <th scope="row"><a href="/mgl_reference/chapter/section">2</a></th>
-                <td>Law</td>
-                <td>Yes</td>
-                <td>Info info</td>
-              </tr>
-              <tr>
-                <th scope="row"><a href="/mgl_reference/chapter/section">3</a></th>
-                <td>Law</td>
-                <td>Yes</td>
-                <td>Info info</td>
-              </tr>
-            </tbody>
-          </table>
+    <div class="col d-flex justify-content-end align-items-center">
+      <a href="/mgl_reference" class="btn btn-primary">Back to All References</a>
+      <a href="/dashboard" class="ms-2 btn btn-primary">Back to Squad Room</a>
     </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Section</th>
+            <th scope="col">Title</th>
+            <th scope="col">Arrestable</th>
+            <th scope="col">Info</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><a href="/mgl_reference/chapter/section">1</a></th>
+            <td>Law</td>
+            <td>Yes</td>
+            <td>Info info</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="/mgl_reference/chapter/section">2</a></th>
+            <td>Law</td>
+            <td>Yes</td>
+            <td>Info info</td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="/mgl_reference/chapter/section">3</a></th>
+            <td>Law</td>
+            <td>Yes</td>
+            <td>Info info</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
 
 {% endblock %}
