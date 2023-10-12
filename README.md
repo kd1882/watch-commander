@@ -1,5 +1,5 @@
 # watch-commander
-Lightweight WebApp to lookup mass general laws and provide a single location for domestic violience, mental health, and OUI resources.
+Lightweight WebApp to lookup mass general laws and provide a single location for domestic violence, mental health, and OUI resources.
 *Showcase for using flask and bootstrap*
 
 # To get started:
@@ -44,3 +44,8 @@ python3 server.py
 - Currently working on roughing in all the bootstrap for the mgl reference portion of the webapp. Then will tie everything together on the backend. Having a bit of an issue with the m.g.l api endpoint...
 
 - Swapped scope of the project to simplify everything. Going to stick with what impacts police officers the most: Application of the laws, domestic violence, mental health, and OUI cases.
+
+### Current Branches:
+
+- WC_002 
+    - Identifying solution for having all of the M.G.L. laws (Chapter and Section) populate. Current working solution is to pull all the data and have it in the database.
