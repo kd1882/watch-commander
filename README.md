@@ -45,6 +45,8 @@ python3 server.py
 
 - Swapped scope of the project to simplify everything. Going to stick with what impacts police officers the most: Application of the laws, domestic violence, mental health, and OUI cases.
 
+- Roughly got the code worked out to view MGL data, it works. Not good, better than it was.
+
 ### Current Branches:
 
 - WC_002 
