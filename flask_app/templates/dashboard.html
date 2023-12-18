@@ -1,5 +1,5 @@
-{% extends "dashboard_base.html" %} 
-{% block title %}Dashboard{% endblock %} 
+{% extends "dashboard_base.html" %}
+{% block title %}Dashboard{% endblock %}
 {%block content %}
 <div class="container">
     <div class="row">
@@ -9,25 +9,32 @@
         </div>
     </div>
     <div class="row">
-      <div class="col text-white border m-1">
-          <h5><a href="/mgl_reference">M.G.L. Reference</a></h5>
-          <p>Use the M.G.L. Reference Lookup tool.</p>
-      </div>
-      <div class="col text-white border m-1">
-          <h5><a href="/mental_health_resources">Mental Health Resources</a></h5>
-          <p>Pertinent resources to assist in dealing with mental health calls</p>
-      </div>
-        
-    </div>
-    <div class="row">
-        <div class="col text-white border m-1">
-            <h5><a href="/oui_reference">OUI Reference</a></h5>
-            <p>Various Resources for OUI Investigations and Reports</p>
-        </div>
-        <div class="col text-white border m-1">
-            <h5><a href="/dv_resources">Domestic Violence Resources</a></h5>
-            <p>A list of all current resources for DV</p>
+        <div class="col">
+            <img src="{{ url_for('static', filename='images/squad_room.png') }}" alt="Squad Room Logo"
+                class="mx-auto d-block" style="max-width: 25%;">
         </div>
     </div>
+</div>
+<div class="row">
+    <div class="col text-white border m-1">
+        <h5><a href="/mgl_reference">M.G.L. Reference</a></h5>
+        <p>Use the M.G.L. Reference Lookup tool.</p>
+    </div>
+    <div class="col text-white border m-1">
+        <h5><a href="/mental_health_resources">Mental Health Resources</a></h5>
+        <p>Pertinent resources to assist in dealing with mental health calls</p>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col text-white border m-1">
+        <h5><a href="/oui_reference">OUI Reference</a></h5>
+        <p>Various Resources for OUI Investigations and Reports</p>
+    </div>
+    <div class="col text-white border m-1">
+        <h5><a href="/dv_resources">Domestic Violence Resources</a></h5>
+        <p>A list of all current resources for DV</p>
+    </div>
+</div>
 </div>
 {% endblock %}

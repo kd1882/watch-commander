@@ -11,24 +11,24 @@
         </div>
     </div>
     {% set chapters=[
-    {"title": "Chapter 90", "description": "Traffic Laws and Citations"},
-    {"title": "Chapter 263", "description": "Rights of Persons Accused of Crimes"},
-    {"title": "Chapter 263A", "description": "Witness Protection in Criminal Matters"},
-    {"title": "Chapter 265", "description": "Crimes Against the Person"},
-    {"title": "Chapter 266", "description": "Crimes Against the Property"},
-    {"title": "Chapter 267", "description": "Forgery and Crimes Against the Currency"},
-    {"title": "Chapter 267A", "description": "Money Laundering"},
-    {"title": "Chapter 268", "description": "Crimes Against Public Justice"},
-    {"title": "Chapter 268A", "description": "Conduct of Public Officials and Employees"},
-    {"title": "Chapter 268B", "description": "Financial Disclosure by Certain..."},
-    {"title": "Chapter 269", "description": "Crimes Against Public Peace"},
-    {"title": "Chapter 270", "description": "Crimes Against Public Health"},
-    {"title": "Chapter 271", "description": "Crimes Against Public Policy"},
-    {"title": "Chapter 271A", "description": "Enterprise Crime"},
-    {"title": "Chapter 272", "description": "Crimes Against Chastity, Morality..."},
-    {"title": "Chapter 273", "description": "Desertion, Support, and Illegitimacy"},
-    {"title": "Chapter 273A", "description": "Uniform Reciprocal Enforcement"},
-    {"title": "Chapter 274", "description": "Felonies"}
+    {"title": "Chapter 90", "description": "Traffic Laws and Citations", "chapter_val": '90'},
+    {"title": "Chapter 263", "description": "Rights of Persons Accused of Crimes", "chapter_val": '263'},
+    {"title": "Chapter 263A", "description": "Witness Protection in Criminal Matters", "chapter_val": '263A'},
+    {"title": "Chapter 265", "description": "Crimes Against the Person", "chapter_val": '265'},
+    {"title": "Chapter 266", "description": "Crimes Against the Property", "chapter_val": '266'},
+    {"title": "Chapter 267", "description": "Forgery and Crimes Against the Currency", "chapter_val": '267'},
+    {"title": "Chapter 267A", "description": "Money Laundering", "chapter_val": '267A'},
+    {"title": "Chapter 268", "description": "Crimes Against Public Justice", "chapter_val": '268'},
+    {"title": "Chapter 268A", "description": "Conduct of Public Officials and Employees", "chapter_val": '268A'},
+    {"title": "Chapter 268B", "description": "Financial Disclosure by Certain...", "chapter_val": '268B'},
+    {"title": "Chapter 269", "description": "Crimes Against Public Peace", "chapter_val": '269'},
+    {"title": "Chapter 270", "description": "Crimes Against Public Health", "chapter_val": '270'},
+    {"title": "Chapter 271", "description": "Crimes Against Public Policy", "chapter_val": '271'},
+    {"title": "Chapter 271A", "description": "Enterprise Crime", "chapter_val": '271A' },
+    {"title": "Chapter 272", "description": "Crimes Against Chastity, Morality...", "chapter_val": '272'},
+    {"title": "Chapter 273", "description": "Desertion, Support, and Illegitimacy", "chapter_val": '273'},
+    {"title": "Chapter 273A", "description": "Uniform Reciprocal Enforcement", "chapter_val": '273A'},
+    {"title": "Chapter 274", "description": "Felonies", "chapter_val": '274'}
     ] %}
 
     {% for i in range(0, chapters|length, 3) %}
@@ -36,7 +36,7 @@
         {% for j in range(3) %}
         {% if chapters[i + j] %}
         <div class="col border">
-            <h4><a class="text-decoration-none" href="/mgl_reference/chapter">{{ chapters[i + j].title }}</a></h4>
+            <h4><a class="text-decoration-none" href="/mgl_reference/chapter/{{ chapters[i + j].chapter_val }}">{{ chapters[i + j].title }}</a></h4>
             <p>{{ chapters[i + j].description }}</p>
         </div>
         {% endif %}

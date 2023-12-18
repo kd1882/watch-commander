@@ -18,29 +18,23 @@
           <tr>
             <th scope="col">Section</th>
             <th scope="col">Title</th>
-            <th scope="col">Arrestable</th>
-            <th scope="col">Info</th>
+            <th scope="col">Text</th>
+            <th scope="col">Repealable?</th>
+            <th scope="col">Mass.Gov Link</th>
+            <th scope="col">Last Upated At</th>
           </tr>
         </thead>
         <tbody>
+          {% for entry in mgl_reference_chapter %}
           <tr>
-            <th scope="row"><a href="/mgl_reference/chapter/section">1</a></th>
-            <td>Law</td>
-            <td>Yes</td>
-            <td>Info info</td>
+            <td>{{ entry.Section }}</td>
+            <td>{{ entry.Name }}</td>
+            <td>{{ entry.Text }}</td>
+            <td>{{ entry.Repealable }}</td>
+            <td><a href="{{ entry.Details }}">{{ entry.Details }}</a></td>
+            <td>{{ entry.updated_at }}</td>
           </tr>
-          <tr>
-            <th scope="row"><a href="/mgl_reference/chapter/section">2</a></th>
-            <td>Law</td>
-            <td>Yes</td>
-            <td>Info info</td>
-          </tr>
-          <tr>
-            <th scope="row"><a href="/mgl_reference/chapter/section">3</a></th>
-            <td>Law</td>
-            <td>Yes</td>
-            <td>Info info</td>
-          </tr>
+          {% endfor %}
         </tbody>
       </table>
     </div>
