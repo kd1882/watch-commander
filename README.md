@@ -1,3 +1,6 @@
+# Project on hold
+I'm sure your disappointed... Just getting back into the swing of things. Going to make a more straight forward implementation.
+
 # watch-commander
 Lightweight WebApp to lookup mass general laws and provide a single location for domestic violence, mental health, and OUI resources.
 *Showcase for using flask and bootstrap*
